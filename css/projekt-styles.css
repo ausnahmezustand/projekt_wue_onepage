@@ -55,12 +55,12 @@ a.titel img {
     float: left;
     padding: 0;
     margin: 6px 8px 4px ;
-    height: 32px;
+    height: 28px;
 }
 
 a.titel h1{
     font-family:"cinnamon cake";
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 400;
     color: #fff;
     float: left;
@@ -68,7 +68,7 @@ a.titel h1{
     margin: 10px 0;
 }
 .navbar {
-   background-color: #222;
+   background-color: #fff;
    padding: 5px 0;
    border: none;
 }
@@ -81,7 +81,7 @@ a.titel h1{
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 1px;
-    color: #fff;
+    color: #222;
     text-transform: uppercase;
 }
 .navbar-nav li a:hover,
@@ -104,6 +104,24 @@ a.titel h1{
     }
 .top-nav-collapse a.titel img {
     }
+@media(min-width:600px) {
+a.titel img {
+    float: left;
+    padding: 0;
+    margin: 6px 8px 4px ;
+    height: 32px;
+}
+a.titel h1{
+    font-family:"cinnamon cake";
+    font-size: 30px;
+    font-weight: 400;
+    color: #fff;
+    float: left;
+    padding: 0;
+    margin: 10px 0;
+}
+}
+
 
 @media(min-width:767px) {
     .navbar {
@@ -122,14 +140,18 @@ a.titel h1{
         color: #222;
         background-color: #fff;
     }
-.navbar-nav li a:active,
-.navbar-nav li a.active,
-.navbar-nav li.active,
-.navbar-nav li.active {
+.navbar-nav li a:hover,
+.navbar-nav li a:focus{
     color: #222;
     background-color: #fff;
 }
-    a.titel img {
+.navbar-nav li a:active,
+.navbar-nav li a.active,
+.navbar-nav li:active,
+.navbar-nav li.active {
+    color: #222;
+    background-color: #fff;
+}    a.titel img {
     float: left;
     padding: 0;
     margin: 0 8px;
@@ -206,6 +228,16 @@ a.titel h1{
 .carousel-indicators {
   bottom: 40px;
 }
+}
+/* Slides */
+#introslide1{
+    background: #4E5933;
+}
+#introslide1{
+    background: #514C84;
+}
+#introslide1{
+    background: #684A20;
 }
 /* ******* CONTAINER ****** */
 .container {
@@ -519,10 +551,7 @@ a.titel h1{
     padding: 5px;
   }
 }
-  /*.sponsors-section .col-md-3 img {
-    background-color: #fff;
-    width: 100%;
-  }*/
+
 /* ******* MEMBERS SECTION ****** */
 .members-section {
     height: 100%;
@@ -540,9 +569,9 @@ a.titel h1{
 }
 section#contact {
     background-color: #222;
-    background-image: url(../img/map-image.png);
+    /*background-image: url(../img/map-image.png);
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
 }
 
 section#contact .section-heading {
@@ -601,6 +630,13 @@ section#contact:-ms-input-placeholder {
 
 section#contact .text-danger {
     color: #e74c3c;
+}
+
+@media(min-width:768px) {
+   .contact-section {
+    padding-top: 120px;
+    text-align: center;
+}
 }
 /* ******* FOOTER ****** */
 .footer {
