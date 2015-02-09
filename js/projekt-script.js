@@ -26,14 +26,3 @@ $(document).on('click', '.navbar-collapse.collapse.in button:not(.navbar-toggle)
     $(this).closest(".navbar-collapse").collapse('hide');
 });
 
-
-//Lightbox support
-//$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
-//    event.preventDefault();
-//    $(this).ekkoLightbox();
-//});
-
-$('.masonry-container').masonry({
-  columnWidth: 60,
-  itemSelector: '.work-masonry-thumb'
-});
