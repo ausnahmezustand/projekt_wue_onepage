@@ -230,14 +230,14 @@ a.titel h1{
 }
 }
 /* Slides */
-#introslide1{
-    background: #4E5933;
+.introslide1{
+    
 }
-#introslide1{
-    background: #514C84;
+.introslide1{
+    
 }
-#introslide1{
-    background: #684A20;
+.introslide1{
+   
 }
 /* ******* CONTAINER ****** */
 .container {
