@@ -23,11 +23,82 @@ a:hover,
 a:focus,
 a:active,
 a.active { /*color: #fff;*/}
+.fixed-to-top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index:100;
+    display:none;
+    /*padding: 0;
+    margin: 0;*/
+}
+
+/* ******* CONTAINER ****** */
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.about-section .row,
+.projekte-section .row,
+.sponsors-section .row,
+.members-section .row,
+.contact-section .row {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+@media (min-width: 768px) {
+  .container {
+    /*width: 750px;*/
+    width: 90%;
+  }
+ .about-section .row,
+.projekte-section .row,
+.sponsors-section .row,
+.members-section .row,
+.contact-section .row {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 100%;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+   .about-section .row,
+.projekte-section .row,
+.sponsors-section .row,
+.members-section .row,
+.contact-section .row {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 100%;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+   .about-section .row,
+.projekte-section .row,
+.sponsors-section .row,
+.members-section .row,
+.contact-section .row {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}
+
 /* ******* NAV TOP BAR ****** */
 a.titel { float: left; padding: 0; margin-left: 5px;}
 a.titel img { float: left; padding: 0; margin: 6px 8px 4px ; height: 28px;}
 a.titel h1{ font-family:"cinnamon cake"; font-size: 24px; font-weight: 400; color: #fff; float: left; padding: 0; margin: 10px 0;}
 .navbar { background-color: #222; padding: 5px 0; border: none;}
+.navbar-default .navbar-toggle .icon-bar {background-color: #fff;}
 .navbar-nav {
     float: right;
     /*padding: 0;
@@ -55,20 +126,23 @@ a.titel h1{ font-family:"cinnamon cake"; font-size: 24px; font-weight: 400; colo
 a.titel img {
     float: left;
     padding: 0;
-    margin: 6px 8px 4px ;
+    margin: 4px 8px 4px ;
     height: 32px;
 }
 a.titel h1{
     font-family:"cinnamon cake";
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 600;
     color: #fff;
     float: left;
     padding: 0;
-    margin: 10px 0;
+    margin: 7px 0;
 }
+.navbar-nav li a.page-scroll {
+        font-size: 14px;
+        color: #fff;
+    }
 }
-
 
 @media(min-width:767px) {
 .navbar {
@@ -79,8 +153,9 @@ a.titel h1{
         transition: background .5s ease-in-out,padding .5s ease-in-out;
     }
 .navbar li a.page-scroll{
-        font-size: 18px;
+        font-size: 15px;
         color: #fff;
+        text-align: right;
     }
 .navbar li a.page-scroll:hover,
 .navbar-nav li a.active:focus {
@@ -102,8 +177,8 @@ a.titel h1{
 a.titel img {
     float: left;
     padding: 0;
-    margin: 0 8px;
-    height: 44px;
+    margin: 0 6px;
+    height: 40px;
 }
 a.titel h1{
     font-family:"cinnamon cake";
@@ -111,11 +186,18 @@ a.titel h1{
     color: #fff;
     float: left;
     padding: 0;
-    margin: 10px 0;
+    margin: 8px 0;
 }
 .top-nav-collapse {
         background: #222;
         padding: 0;
+    }
+.top-nav-collapse  li a:active,
+.top-nav-collapse  li a.active,
+.top-nav-collapse  li:active,
+.top-nav-collapse  li.active {
+        background-color: #fff;
+        color: #222;
     }
 .top-nav-collapse a.titel img {
         height: 32px;
@@ -123,7 +205,58 @@ a.titel h1{
     }
 }
 
-
+@media (max-width: 1023px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+  		display:block !important;
+	}
+}
+@media (min-width: 1024px) {
+    .a.titel img {
+    float: left;
+    padding: 0;
+    margin: 0 6px;
+    height: 50px;
+}
+	a.titel h1{
+    font-family:"cinnamon cake";
+    font-weight: 600;
+}
+.top-nav-collapse a.titel img {
+        height: 36px;
+        margin: 10px 8px;
+    } 
+}
 /* ******* HEADER INTRO SLIDER ****** */
 .intro-section {
     height: 100%;
@@ -176,17 +309,17 @@ a.titel h1{
 .carousel .carousel-inner .intro1 h2 {
 	/*background-image:url(bg1.jpg);
 	background-position: center top; */
-	color: rgba(215, 40, 40, 0.9);
+	color: #E71D2B;
 }
 .carousel .carousel-inner .intro2 {
 	/*background-image:url(bg2.jpg);
 	background-position: center center; */
-	background-color: #E81C2B;
+	background-color: #36BAB4;
 }
 .carousel .carousel-inner .intro3 {
 	/*background-image:url(bg3.jpg);
 	background-position: center bottom; */
-	background-color: #36BAB4;
+	background-color: #E71D2B;
 }
 @media(min-width:768px) {
 .intro-section {
@@ -203,10 +336,10 @@ a.titel h1{
 .carousel-indicators {
   bottom: 40px;
 }
-.carousel .carousel-inner .bg img {
+/*.carousel .carousel-inner .bg img {
 	width: 100%;
 	margin-top: 0px;
-}
+}*/
 .carousel .carousel-inner h2 {
 	font-weight: 700;
 	font-size: 60px;
@@ -222,79 +355,39 @@ a.titel h1{
 }
 .carousel .carousel-inner .intro1 img {
 	width: 70%;
-	margin-top: 0px;
+	margin-top: 30px;
 }
-.carousel .carousel-inner .intro1 {
-	/*background-image:url(bg1.jpg);
-	background-position: center top; */
-	background-color: #26760C;
-	color: #222;
+.carousel .carousel-inner .intro2 h2 {
 }
-.carousel .carousel-inner .intro1 h2 {
-	/*background-image:url(bg1.jpg);
-	background-position: center top; */
-	color: rgba(215, 40, 40, 0.9);
+.carousel .carousel-inner .intro2. img {
+	width: 40%;
+}
+.carousel .carousel-inner .intro3 img {
+	width: 60%;
+	margin-top: 50px;
+}
+}
+@media(min-width:1024px) {
+.carousel .carousel-inner .intro1 img {
+	width: 70%;
+	margin-top: 50px;
+}
+.carousel .carousel-inner .intro3 img {
+	width: 60%;
+	margin-top: 60px;
 }
 }
 
-/* ******* CONTAINER ****** */
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+.carousel-control .glyphicon-menu-left,
+.carousel-control .glyphicon-menu-right {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-block;
+  font-size:30px;
 }
-.about-section .row,
-.projekte-section .row,
-.sponsors-section .row,
-.members-section .row,
-.contact-section .row {
-    padding-right: 25px;
-    padding-left: 25px;
-  }
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
- .about-section .row,
-.projekte-section .row,
-.sponsors-section .row,
-.members-section .row,
-.contact-section .row {
-    padding-right: 40px;
-    padding-left: 40px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 100%;
-    padding-right: 40px;
-    padding-left: 40px;
-  }
-   .about-section .row,
-.projekte-section .row,
-.sponsors-section .row,
-.members-section .row,
-.contact-section .row {
-    padding-right: 60px;
-    padding-left: 60px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 100%;
-    padding-right: 40px;
-    padding-left: 40px;
-  }
-   .about-section .row,
-.projekte-section .row,
-.sponsors-section .row,
-.members-section .row,
-.contact-section .row {
-    padding-right: 100px;
-    padding-left: 100px;
-  }
-}
+
+
 /* ******* ABOUT SECTION ****** */
 .about-section {
     min-height: 100%;
@@ -302,10 +395,30 @@ a.titel h1{
     text-align: center;
     background: #eee;
 }
+.row.featurette {
+    padding-bottom: 40px;
+  }
+.featurette h1,
+.featurette h3,
+.featurette p {
+    text-align: left;
+  }
+/*.featurette h1 {
+    color: #E71D2B;
+  }*/
+.featurette-image {
+    margin-top: 30px;
+  }
+
 .about-section .timeline-starter { position: relative;
     margin-top: 30px;
     min-height: 50px;
 }
+.jumbotron.about-jumbo {
+        background-color: #ffffff;
+        padding-top:30px;
+}
+
 /* ******* PROJEKT SECTION ****** */
 .projekte-section {
     /*height: 100%;*/
@@ -329,7 +442,7 @@ a.titel h1{
     left: 40px;
     width: 2px;
     margin-left: -1.5px;
-    background-color: #f1f1f1;
+    background-color: #DDDDDD;
 }
 
 .timeline>li {
@@ -377,11 +490,11 @@ a.titel h1{
     width: 80px;
     height: 80px;
     margin-left: 0;
-    border: 7px solid #eee;
+    border: 7px solid #DDDDDD;
     border-radius: 100%;
     text-align: center;
     color: #fff;
-    background-color: rgba(215, 40, 40, 0.9);
+    background-color: #E71D2B;
 }
 
 .timeline>li .timeline-image h4 {
@@ -522,6 +635,10 @@ a.titel h1{
         padding: 0 10px 10px 80px;
     }
 }
+.jumbotron.projekt-jumbo {
+        background-color: #DDDDDD;
+}
+
 /* ******* SPONSOR SECTION ****** */
 .sponsors-section {
     padding-top: 100px;
@@ -557,6 +674,18 @@ a.titel h1{
     text-align: center;
     background: #fff;
     padding-bottom: 45px;
+}
+@media (min-width: 660px) {
+  .col-lg-3 {
+    width: 50%;
+    float: left;
+  }
+}
+@media (min-width: 992px) {
+  .col-lg-3 {
+    width: 25%;
+    float: left;
+  }
 }
 /* ******* KONTAKT SECTION ****** */
 .contact-section {

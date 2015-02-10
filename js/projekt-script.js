@@ -6,6 +6,14 @@ $(window).scroll(function() {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
     }
 });
+//jQuery for page scrolling feature - requires jQuery Easing plugin
+$(window).scroll(function() {
+   if ($(".fixed-to-top").offset().top > 1100) {
+        $(".fixed-to-top").fadeIn(1500);
+    } else {
+        $(".fixed-to-top").fadeOut(2000);
+    }
+    });
 
 //jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
@@ -13,7 +21,7 @@ $(function() {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
+        }, 2000, 'easeInOutExpo');
         event.preventDefault();
     });
 });
