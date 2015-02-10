@@ -95,8 +95,8 @@ a.active { /*color: #fff;*/}
 
 /* ******* NAV TOP BAR ****** */
 a.titel { float: left; padding: 0; margin-left: 5px;}
-a.titel img { float: left; padding: 0; margin: 6px 8px 4px ; height: 28px;}
-a.titel h1{ font-family:"cinnamon cake"; font-size: 22px; font-weight: 400; color: #fff; float: left; padding: 0; margin: 10px 0;}
+a.titel img { float: left; padding: 0; margin: 8px 8px 4px ; height: 28px;}
+a.titel h1{ font-family:"cinnamon cake"; font-size: 22px; font-weight: 400; color: #fff; float: left; padding: 0; margin: 12px 0;}
 .navbar { background-color: #222; padding: 5px 0; border: none;}
 .navbar-default .navbar-toggle .icon-bar {background-color: #fff;}
 .navbar-nav {
